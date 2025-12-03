@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    android:persistent="true"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:compileSdkVersion="33"
+    android:compileSdkVersionCodename="13"
+    package="me.phh.treble.app"
+    platformBuildVersionCode="33"
+    platformBuildVersionName="13">
+    <uses-sdk
+        android:minSdkVersion="27"
+        android:targetSdkVersion="33"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.DIAGNOSTIC"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_settings"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <uses-library
+            android:name="android.hidl.manager.V1_0"
+            android:required="false"/>
+        <uses-library
+            android:name="vendor.huawei.hardware.biometrics.fingerprint.V2_1"
+            android:required="false"/>
+        <uses-library
+            android:name="vendor.huawei.hardware.tp.V1_0"
+            android:required="false"/>
+        <uses-library
+            android:name="vendor.qti.hardware.radio.am.V1_0"
+            android:required="false"/>
+        <uses-library
+            android:name="vendor.qti.qcril.am.V1_0"
+            android:required="false"/>
+        <service android:name="me.phh.treble.app.EntryService"/>
+        <service android:name="me.phh.treble.app.NubiaAutoFanControlService"/>
+        <service
+            android:label="Game Mode"
+            android:icon="@drawable/tile_game_mode"
+            android:name="me.phh.treble.app.NubiaGameModeTilesService"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:enabled="false"
+            android:exported="true">
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="Fan Control"
+            android:icon="@drawable/tile_fan_control"
+            android:name="me.phh.treble.app.NubiaFanControlTilesService"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:enabled="false"
+            android:exported="true">
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="Shoulder triggers"
+            android:icon="@drawable/tile_game_mode"
+            android:name="me.phh.treble.app.NubiaShoulderBtnTilesService"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:enabled="false"
+            android:exported="true">
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true"/>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="me.phh.treble.app.Starter"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="me.phh.update"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.TrebleApp"
+            android:label="@string/title_activity_settings"
+            android:name="me.phh.treble.app.SettingsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="me.phh.treble.app.TopLevelSettingsActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity="me.phh.treble.app.SettingsActivity">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage"/>
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/desc_activity_top_level"/>
+            <meta-data
+                android:name="com.android.settings.title"
+                android:resource="@string/title_activity_top_level"/>
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_settings"/>
+            <meta-data
+                android:name="com.android.settings.order"
+                android:value="-190"/>
+        </activity-alias>
+        <activity
+            android:theme="@style/Theme.TrebleApp"
+            android:label="@string/title_activity_updater"
+            android:name="me.phh.treble.app.UpdaterActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter android:priority="1">
+                <action android:name="android.settings.SYSTEM_UPDATE_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="me.phh.treble.app.REPL"
+            android:permission="android.permission.INTERACT_ACROSS_USERS"
+            android:exported="true"/>
+        <activity
+            android:theme="@android:style/Theme.Material.Dialog"
+            android:name="me.phh.treble.app.DesktopInput"
+            android:launchMode="singleTask"/>
+        <activity android:name="me.phh.treble.app.DebugSensors"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+    </application>
+</manifest>
