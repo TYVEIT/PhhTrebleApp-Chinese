@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Display">
+        <SwitchPreference
+            android:title="Enable DT2W"
+            android:key="key_transsion_dt2w"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Other">
+        <SwitchPreference
+            android:title="Enable USB OTG"
+            android:key="key_transsion_usb_otg"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

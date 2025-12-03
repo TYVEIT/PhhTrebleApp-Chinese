@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Touchscreen">
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Enable DT2W"
+            android:key="key_oppo_double_tap_to_wake"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Enable game mode"
+            android:key="key_oppo_ts_game_mode"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Other">
+        <SwitchPreference
+            android:title="Enable USB OTG"
+            android:key="key_oppo_usb_otg"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="Enable DC Diming"
+            android:key="key_oppo_dc_diming"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

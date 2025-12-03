@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Doze">
+        <SwitchPreference
+            android:title="Enable Handwave gesture"
+            android:key="key_doze_handwave"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="Enable out-of-pocket gesture"
+            android:key="key_doze_pocket"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Enable Chop Chop gesture"
+            android:key="key_doze_chopchop"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

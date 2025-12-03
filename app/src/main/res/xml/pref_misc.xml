@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:title="赞助我"
+        android:key="key_sponsor">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/sponsors/phhusson/"/>
+    </Preference>
+    <Preference
+        android:title="汉化人员"
+        android:key="key_lhr">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://tyveit.github.io/mig0170/"/>
+    </Preference>
+    <PreferenceCategory android:title="@string/MN">
+        <ListPreference
+            android:entries="@array/pref_misc_mobile_signal"
+            android:title="信号表"
+            android:key="key_misc_mobile_signal"
+            android:defaultValue="default"
+            android:entryValues="@array/pref_misc_mobile_signal_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Audio">
+        <SwitchPreference
+            android:title="强制耳机切换（华为默认）"
+            android:key="key_huawei_headset_fix"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="使用替代方法检测耳机"
+            android:key="key_misc_headset_devinput"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="禁用音效"
+            android:key="key_misc_disable_audio_effects"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="禁用快速音频"
+            android:key="key_misc_disable_fast_audio"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Display_res_0x7f0f0048">
+        <EditTextPreference
+            android:title="设置圆角直径"
+            android:key="key_misc_rounded_corners"
+            android:summary="需重启"
+            android:defaultValue="-1"
+            android:inputType="number"/>
+        <EditTextPreference
+            android:title="设置强制/faked的圆角直径"
+            android:key="key_misc_rounded_corners_overlay"
+            android:defaultValue="-1"
+            android:inputType="number"/>
+        <ListPreference
+            android:entries="@array/pref_misc_display_fps"
+            android:title="强制FPS"
+            android:key="key_misc_display_fps"
+            android:defaultValue="-1"
+            android:entryValues="@array/pref_misc_display_fps_values"/>
+        <SwitchPreference
+            android:title="动态FPS"
+            android:key="key_misc_dynamic_fps"
+            android:summary="根据屏幕上的内容调整FPS 需重启"
+            android:defaultValue="false"/>
+        <Preference
+            android:title="@string/Restart_SystemUI"
+            android:key="key_misc_restart_systemui"
+            android:summary="@string/Recommended_SystemUI"/>
+        <SwitchPreference
+            android:title="禁用硬件覆盖"
+            android:key="key_misc_no_hwcomposer"
+            android:summary="会更耗电"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="强制允许常显显示"
+            android:key="key_misc_aod"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="Rotation perf hint instead of touch"
+            android:key="key_misc_mediatek_touch_hint_rotate"
+            android:summary="适用于联发科设备"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="联发科 GED KPI 支持"
+            android:key="key_misc_mediatek_ged_kpi"
+            android:summary="可能会提高联发科设备的 GPU 性能"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="禁用 SF GL 背压"
+            android:key="key_misc_disable_sf_gl_backpressure"
+            android:summary="可能改善渲染性能 需重启"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="禁用 SF HWC 背压"
+            android:key="key_misc_disable_sf_hwc_backpressure"
+            android:summary="可能改善渲染性能"
+            android:defaultValue="false"/>
+        <ListPreference
+            android:entries="@array/pref_misc_max_aspect_ratio_pre_o"
+            android:title="兼容的最大纵横比"
+            android:key="key_misc_max_aspect_ratio_pre_o"
+            android:defaultValue="1.86"
+            android:entryValues="@array/pref_misc_max_aspect_ratio_pre_o_values"/>
+        <SwitchPreference
+            android:title="禁用强制导航栏"
+            android:key="key_misc_force_navbar_off"
+            android:summary="需重启"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Backlight">
+        <SwitchPreference
+            android:title="设置备用亮度曲线"
+            android:key="key_misc_low_gamma_brightness"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="设置线性亮度曲线"
+            android:key="key_misc_linear_brightness"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="禁用硬件按钮背光"
+            android:key="key_misc_disable_buttons_backlight"
+            android:summary="需重启"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="强制使用备用背光比例"
+            android:key="key_misc_backlight_scale"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="允许将亮度设置为最低"
+            android:key="key_misc_minimal_brightness"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Camera">
+        <SwitchPreference
+            android:title="显示辅助摄像头"
+            android:key="key_misc_multi_camera"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="强制启用相机 2API HAL3"
+            android:key="key_misc_force_camera2api_hal3"
+            android:defaultValue="false"/>
+        <ListPreference
+            android:entries="@array/pref_misc_camera_timestamp"
+            android:title="强制时间戳来源"
+            android:key="key_misc_camera_timestamp"
+            android:summary="需重启"
+            android:defaultValue="-1"
+            android:entryValues="@array/pref_misc_camera_timestamp_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Bluetooth">
+        <SwitchPreference
+            android:title="使用系统范围的蓝牙 HAL"
+            android:key="key_misc_dynamic_sysbta"
+            android:defaultValue="true"/>
+        <ListPreference
+            android:entries="@array/pref_misc_bluetooth"
+            android:title="蓝牙不可用解决选项(翻译可能不正确)"
+            android:key="key_misc_bluetooth"
+            android:defaultValue="0"
+            android:entryValues="@array/pref_misc_bluetooth_values"/>
+        <ListPreference
+            android:entries="@array/pref_misc_transport_size"
+            android:title="设置 eSCO 传输单元大小"
+            android:key="key_misc_esco_transport_unit_size"
+            android:defaultValue="0"
+            android:entryValues="@array/pref_misc_transport_size_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Telephony">
+        <SwitchPreference
+            android:title="允许在来电时绑定线程"
+            android:key="key_misc_allow_binder_thread_on_incoming_calls"
+            android:summary="可能修复4G通话 需重启"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="强制显示5G网络"
+            android:key="key_misc_force_display_5g"
+            android:summary="将 5G 显示为首选网络类型 需重启"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="禁用“语音通话”"
+            android:key="key_misc_disable_voice_call_in"
+            android:summary="可能修复通话中的回声或无法使用的音频 需重启"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="自动重置 RIL"
+            android:key="key_misc_restart_ril"
+            android:defaultValue="false"/>
+        <Preference
+            android:title="@string/remove_telephony_subsystem"
+            android:key="key_misc_removetelephony"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Other_O2">
+        <SwitchPreference
+            android:title="禁用 FUSE 存储层"
+            android:key="key_misc_storage_fuse"
+            android:summary="这可能会（降低 Or 提高）存储速度，需重启"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="双击唤醒"
+            android:key="key_misc_dt2w"
+            android:summary="不太可能对设备有效"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:title="停用 WPA3/SAE"
+            android:key="key_misc_disable_sae_upgrade"
+            android:defaultValue="false"/>
+        <ListPreference
+            android:entries="@array/pref_misc_fod_color"
+            android:title="屏下指纹颜色"
+            android:key="key_misc_fod_color"
+            android:defaultValue="00ff00"
+            android:entryValues="@array/pref_misc_fod_color_values"/>
+        <Preference
+            android:enabled="false"
+            android:title="Securize"
+            android:summary="不支持 - 请尝试其他方法（例如 PlayIntegrityFix 模块）"/>
+        <SwitchPreference
+            android:title="@string/Secure_adb"
+            android:key="key_misc_secure_adb"
+            android:summary="@string/ADB_Sou"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Debugging">
+        <Preference android:title="@string/Debug_Sensors">
+            <intent
+                android:targetPackage="me.phh.treble.app"
+                android:action="android.intent.action.VIEW"
+                android:targetClass="me.phh.treble.app.DebugSensors"/>
+        </Preference>
+        <SwitchPreference
+            android:title="允许 Phh 接管设备进行调试"
+            android:key="key_misc_remotectl"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

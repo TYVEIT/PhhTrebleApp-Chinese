@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="系统界面调试器">
+        <intent
+            android:targetPackage="com.android.systemui"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.android.systemui.DemoMode"/>
+    </Preference>
+    <PreferenceCategory android:title="界面">
+        <ListPreference
+            android:entries="@array/pref_custom_pointer_type"
+            android:title="指针类型"
+            android:key="key_custom_pointer_type"
+            android:summary="需重启"
+            android:defaultValue="0"
+            android:entryValues="@array/pref_custom_pointer_type_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="风格">
+        <ListPreference
+            android:entries="@array/pref_custom_accent_color"
+            android:title="强调色"
+            android:key="key_custom_accent_color"
+            android:defaultValue=""
+            android:entryValues="@array/pref_custom_accent_color_values"/>
+        <ListPreference
+            android:entries="@array/pref_custom_icon_shape"
+            android:title="图标形状"
+            android:key="key_custom_icon_shape"
+            android:defaultValue=""
+            android:entryValues="@array/pref_custom_icon_shape_values"/>
+        <ListPreference
+            android:entries="@array/pref_custom_icon_pack"
+            android:title="图标包"
+            android:key="key_custom_icon_pack"
+            android:defaultValue=""
+            android:entryValues="@array/pref_custom_icon_pack_values"/>
+        <ListPreference
+            android:entries="@array/pref_custom_font_family"
+            android:title="字体"
+            android:key="key_custom_font_family"
+            android:defaultValue=""
+            android:entryValues="@array/pref_custom_font_family_values"/>
+    </PreferenceCategory>
+</PreferenceScreen>

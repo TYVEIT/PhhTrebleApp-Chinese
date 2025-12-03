@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/Display_res_0x7f0f0045">
+        <ListPreference
+            android:entries="@array/pref_oneplus_display_mode"
+            android:title="@string/Display_Mode"
+            android:key="key_oneplus_display_mode"
+            android:defaultValue="default"
+            android:entryValues="@array/pref_oneplus_display_mode_values"/>
+        <ListPreference
+            android:entries="@array/pref_oneplus_display_high_brightness"
+            android:title="@string/High_brightnessmode"
+            android:key="key_oneplus_display_high_brightness"
+            android:defaultValue="0"
+            android:entryValues="@array/pref_oneplus_display_high_brightness_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Other">
+        <SwitchPreference
+            android:title="@string/EUO"
+            android:key="key_oneplus_usb_otg"
+            android:defaultValue="false"/>
+        <SwitchPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="@string/Enable_DT2W"
+            android:key="key_oneplus_double_tap_to_wake"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>

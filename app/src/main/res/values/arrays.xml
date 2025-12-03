@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_asus_usb_port_picker">
+        <item>Port 1</item>
+        <item>Port 2</item>
+    </array>
+    <array name="pref_asus_usb_port_picker_values">
+        <item>port_1</item>
+        <item>port_2</item>
+    </array>
+    <array name="pref_custom_accent_color">
+        <item>Default</item>
+    </array>
+    <array name="pref_custom_accent_color_values">
+        <item />
+    </array>
+    <array name="pref_custom_font_family">
+        <item>Default</item>
+    </array>
+    <array name="pref_custom_font_family_values">
+        <item />
+    </array>
+    <array name="pref_custom_icon_pack">
+        <item>Default</item>
+    </array>
+    <array name="pref_custom_icon_pack_values">
+        <item />
+    </array>
+    <array name="pref_custom_icon_shape">
+        <item>Default</item>
+    </array>
+    <array name="pref_custom_icon_shape_values">
+        <item />
+    </array>
+    <array name="pref_custom_pointer_type">
+        <item>Mouse cursor</item>
+        <item>Pen pointer</item>
+        <item>Transparent</item>
+    </array>
+    <array name="pref_custom_pointer_type_values">
+        <item>mouse</item>
+        <item>pen</item>
+        <item>transparent</item>
+    </array>
+    <array name="pref_huawei_fast_charge">
+        <item>Standard USB charging (1500mA)</item>
+        <item>Mid-fast (2750mA)</item>
+        <item>Fast (4000mA)</item>
+    </array>
+    <array name="pref_huawei_fast_charge_values">
+        <item>-1</item>
+        <item>2750</item>
+        <item>4000</item>
+    </array>
+    <array name="pref_misc_bluetooth">
+        <item>None</item>
+        <item>Mediatek</item>
+        <item>Huawei</item>
+    </array>
+    <array name="pref_misc_bluetooth_values">
+        <item>none</item>
+        <item>mediatek</item>
+        <item>huawei</item>
+    </array>
+    <array name="pref_misc_camera_timestamp">
+        <item>Don\'t override</item>
+        <item>Clock monotonic</item>
+        <item>Clock boottime</item>
+    </array>
+    <array name="pref_misc_camera_timestamp_values">
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+    </array>
+    <array name="pref_misc_display_fps">
+        <item>Don\'t force</item>
+        <item>60fps</item>
+    </array>
+    <array name="pref_misc_display_fps_values">
+        <item>-1</item>
+        <item>0</item>
+    </array>
+    <array name="pref_misc_fod_color">
+        <item>Green</item>
+        <item>Cyan</item>
+        <item>White</item>
+    </array>
+    <array name="pref_misc_fod_color_values">
+        <item>00ff00</item>
+        <item>00ffff</item>
+        <item>ffffff</item>
+    </array>
+    <array name="pref_misc_max_aspect_ratio_pre_o">
+        <item>1.86 (default)</item>
+        <item>2.0</item>
+        <item>Infinite</item>
+    </array>
+    <array name="pref_misc_max_aspect_ratio_pre_o_values">
+        <item>1.86</item>
+        <item>2.0</item>
+        <item>0.0</item>
+    </array>
+    <array name="pref_misc_mobile_signal">
+        <item>Android default</item>
+        <item>Huawei devices/OpenKirin</item>
+        <item>RSSI</item>
+        <item>RSRP</item>
+        <item>RSSNR</item>
+    </array>
+    <array name="pref_misc_mobile_signal_values">
+        <item>default</item>
+        <item>openkirin</item>
+        <item>rssi</item>
+        <item>rsrp</item>
+        <item>rssnr</item>
+    </array>
+    <array name="pref_misc_transport_size">
+        <item>0 (default)</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+    </array>
+    <array name="pref_misc_transport_size_values">
+        <item>0</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+    </array>
+    <array name="pref_nubia_fan">
+        <item>Off</item>
+        <item>Low</item>
+        <item>Middle</item>
+        <item>High</item>
+    </array>
+    <array name="pref_nubia_fan_values">
+        <item>0</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
+    <array name="pref_nubia_redmagic_led">
+        <item>Off</item>
+        <item>Scrolling effect 0</item>
+        <item>Scrolling effect 1</item>
+        <item>Scrolling effect 2</item>
+        <item>Scrolling effect 3</item>
+        <item>Scrolling effect 4</item>
+        <item>Scrolling effect 5</item>
+        <item>Scrolling effect 6</item>
+        <item>Scrolling effect 7</item>
+        <item>Scrolling effect 8</item>
+        <item>Blinking slow effect 0</item>
+        <item>Blinking slow effect 1</item>
+        <item>Blinking slow effect 2</item>
+        <item>Blinking slow effect 3</item>
+        <item>Blinking slow effect 4</item>
+        <item>Blinking slow effect 5</item>
+        <item>Blinking slow effect 6</item>
+        <item>Blinking slow effect 7</item>
+        <item>Blinking slow effect 8</item>
+        <item>Blinking fast effect 0</item>
+        <item>Blinking fast effect 1</item>
+        <item>Blinking fast effect 2</item>
+        <item>Blinking fast effect 3</item>
+        <item>Blinking fast effect 4</item>
+        <item>Blinking fast effect 5</item>
+        <item>Blinking fast effect 6</item>
+        <item>Blinking fast effect 7</item>
+        <item>Blinking fast effect 8</item>
+    </array>
+    <array name="pref_nubia_redmagic_led_values">
+        <item>0</item>
+        <item>0xa0</item>
+        <item>0xa1</item>
+        <item>0xa2</item>
+        <item>0xa3</item>
+        <item>0xa4</item>
+        <item>0xa5</item>
+        <item>0xa6</item>
+        <item>0xa7</item>
+        <item>0xa8</item>
+        <item>0x70</item>
+        <item>0x71</item>
+        <item>0x72</item>
+        <item>0x73</item>
+        <item>0x74</item>
+        <item>0x75</item>
+        <item>0x76</item>
+        <item>0x77</item>
+        <item>0x78</item>
+        <item>0x80</item>
+        <item>0x81</item>
+        <item>0x82</item>
+        <item>0x83</item>
+        <item>0x85</item>
+        <item>0x86</item>
+        <item>0x87</item>
+        <item>0x88</item>
+    </array>
+    <array name="pref_oneplus_display_high_brightness">
+        <item>Disabled</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
+    <array name="pref_oneplus_display_high_brightness_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </array>
+    <array name="pref_oneplus_display_mode">
+        <item>Default</item>
+        <item>DCI-P3</item>
+        <item>sRGB</item>
+    </array>
+    <array name="pref_oneplus_display_mode_values">
+        <item>default</item>
+        <item>dcip3</item>
+        <item>srgb</item>
+    </array>
+</resources>

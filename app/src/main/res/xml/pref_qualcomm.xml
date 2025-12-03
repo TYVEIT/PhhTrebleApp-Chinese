@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:title="Use alternate camera profile"
+        android:key="key_qualcomm_alternate_mediaprofile"
+        android:summary="Requires a reboot"
+        android:defaultValue="false"/>
+    <SwitchPreference
+        android:title="Use alternate audio policy"
+        android:key="key_qualcomm_alternate_audiopolicy"
+        android:defaultValue="false"/>
+    <SwitchPreference
+        android:title="Disable soundvolume effect"
+        android:key="key_qualcomm_disable_soundvolume_effect"
+        android:summary="May fix audio distorsion"
+        android:defaultValue="false"/>
+    <SwitchPreference
+        android:title="Disable stereo support on VoIP"
+        android:key="key_qualcomm_disable_stereo_voip"
+        android:summary="May fix high pitched audio. Requires a reboot"
+        android:defaultValue="false"/>
+</PreferenceScreen>
